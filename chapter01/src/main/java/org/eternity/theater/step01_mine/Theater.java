@@ -9,9 +9,11 @@ public class Theater {
 
     public void enter(Audience audience) {
         if (audience.hasInvitation()) {
+            System.out.println("Enter with Invitation");
             Ticket ticket = ticketSeller.getTicket();
             audience.getTicket(ticket);
         } else {
+            System.out.println("Enter w/o Invitation");
             Ticket ticket = ticketSeller.sellTicket();
             audience.buyTicket(ticket);
         }

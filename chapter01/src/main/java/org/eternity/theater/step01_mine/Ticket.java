@@ -7,5 +7,7 @@ public class Ticket {
         return fee;
     }
 
-
+    public Ticket(Long fee) {
+        this.fee = fee;
+    }
 }
