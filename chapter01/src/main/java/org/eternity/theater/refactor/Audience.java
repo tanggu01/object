@@ -1,4 +1,4 @@
-package org.eternity.theater.step01_refactor;
+package org.eternity.theater.refactor;
 
 public class Audience {
     private Bag bag;

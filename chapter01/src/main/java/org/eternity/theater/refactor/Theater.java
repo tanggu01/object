@@ -1,4 +1,4 @@
-package org.eternity.theater.step01_mine;
+package org.eternity.theater.refactor;
 
 public class Theater {
     private TicketSeller ticketSeller;
@@ -8,16 +8,7 @@ public class Theater {
     }
 
     public void enter(Audience audience) {
-        if (audience.hasInvitation()) {
-            System.out.println("Enter with Invitation");
-            Ticket ticket = ticketSeller.getTicket();
-            audience.getTicket(ticket);
-        } else {
-            System.out.println("Enter w/o Invitation");
-            Ticket ticket = ticketSeller.sellTicket();
-            audience.buyTicket(ticket);
-        }
-
+        ticketSeller.sellTo(audience); // 아래 세부 구현을 TicketSeller 안으로 이동
 //        if (audience.getBag().hasInvitation()) {
 //            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
 //            audience.getBag().setTicket(ticket);

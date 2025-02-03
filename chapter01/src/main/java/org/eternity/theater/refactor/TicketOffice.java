@@ -1,4 +1,4 @@
-package org.eternity.theater.step01_mine;
+package org.eternity.theater.refactor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,15 +13,21 @@ public class TicketOffice {
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
-    public Ticket getTicket() {
+    private Ticket getTicket() {
         return tickets.remove(0);
     }
 
-    public void minusAmount(Long amount) {
+    private void minusAmount(Long amount) {
         this.amount -= amount;
     }
 
-    public void plusAmount(Long amount) {
+    private void plusAmount(Long amount) {
         this.amount += amount;
+    }
+
+    public void sellTicketTo(Audience audience) {
+        Ticket ticket = getTicket();
+        Long paidAmount = audience.buy(ticket);
+        plusAmount(paidAmount);
     }
 }
