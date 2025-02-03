@@ -1,7 +1,4 @@
-package org.eternity.theater.step01_copy.step01;
-
-import java.util.ArrayList;
-import java.util.List;
+package org.eternity.theater.step01_mine;
 
 public class Main {
     public static void main(String[] args) {

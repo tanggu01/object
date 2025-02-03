@@ -1,4 +1,4 @@
-package org.eternity.theater.step01_copy.step01;
+package org.eternity.theater.step01_mine;
 
 public class Bag {
     private Long amount;

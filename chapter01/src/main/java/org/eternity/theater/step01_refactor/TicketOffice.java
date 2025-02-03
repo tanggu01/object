@@ -1,4 +1,4 @@
-package org.eternity.theater.step01;
+package org.eternity.theater.step01_refactor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ public class TicketOffice {
     private Long amount;
     private List<Ticket> tickets = new ArrayList<>();
 
-    public TicketOffice(Long amount, Ticket ... tickets) {
+    public TicketOffice(Long amount, Ticket... tickets) {
         this.amount = amount;
         this.tickets.addAll(Arrays.asList(tickets));
     }

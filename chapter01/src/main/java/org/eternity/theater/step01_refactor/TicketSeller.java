@@ -1,4 +1,4 @@
-package org.eternity.theater.step01;
+package org.eternity.theater.step01_refactor;
 
 public class TicketSeller {
     private TicketOffice ticketOffice;
